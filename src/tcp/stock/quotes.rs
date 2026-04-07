@@ -248,10 +248,10 @@ fn parse_quote(data: &[u8], pos: &mut usize) -> QuoteData {
         code,
         name: String::new(), // 名称需要另外查询
         price: price_calc,
-        preclose: _last_close_diff / 100.0,     // 需要从last_close_diff计算
-        open: _open_diff / 100.0,   // 需要从open_diff计算
-        high: _high_diff / 100.0,   // 需要从high_diff计算
-        low: _low_diff / 100.0,    // 需要从low_diff计算
+        preclose: _last_close_diff as f64 / 100.0,
+        open: _open_diff as f64 / 100.0,
+        high: _high_diff as f64 / 100.0,
+        low: _low_diff as f64 / 100.0,
         vol: vol as f64 / 100.0,
         amount,
         bid1: bid1 as f64 / 100.0,
